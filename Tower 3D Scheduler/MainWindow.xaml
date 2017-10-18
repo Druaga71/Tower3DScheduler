@@ -1,0 +1,24 @@
+﻿<Window x:Class="Tower_3D_Scheduler.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Tower_3D_Scheduler"
+    Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open" Click="MenuItemOpen_Click"/>
+                    <MenuItem Header="_Close"/>
+                    <MenuItem Header="_Save"/>
+                </MenuItem>
+                <MenuItem Header="_Airfields" x:Name="m_mnuAirfields"/>
+            </Menu>
+        </DockPanel>
+		<local:ucAirlines x:Name="m_ucAirlines"
+			Grid.Row="1"/>
+	</Grid>
+</Window>
